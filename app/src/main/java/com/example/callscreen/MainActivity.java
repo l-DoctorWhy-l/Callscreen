@@ -7,11 +7,15 @@ import androidx.constraintlayout.widget.ConstraintSet;
 import android.app.AlertDialog;
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
 import android.os.Bundle;
 import android.util.TypedValue;
 import android.view.View;
 
 import com.example.callscreen.databinding.ActivityMainBinding;
+
+import jp.wasabeef.blurry.Blurry;
 
 public class MainActivity extends AppCompatActivity {
     ActivityMainBinding binding;
@@ -26,6 +30,8 @@ public class MainActivity extends AppCompatActivity {
         setContentView(binding.getRoot());
         binding.userName.setText(StringCutter.cutter(user_name,28));
         binding.interlocutorName.setText(StringCutter.cutter(interlocutor_name,28));
+
+        Blurry.with(this).capture(binding.userLogo).into(binding.userLogo);
 
         binding.closeButton.setOnClickListener(view -> finish());
 
@@ -112,6 +118,14 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 showAlertHiDialog();
+            }
+        });
+
+        binding.interlocutorsButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this,ContactsActivity.class);
+                startActivity(intent);
             }
         });
 
