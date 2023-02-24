@@ -1,4 +1,27 @@
 <resources>
     <string name="app_name">Call screen</string>
     <string name="hi">Привет</string>
+    <string name="contacts">Контакты</string>
+
+    <string-array name="contacts">
+        <item>Агнес</item>
+        <item>Антонио</item>
+        <item>Боб</item>
+        <item>Дейв</item>
+        <item>Доктор Нефарио</item>
+        <item>Дрю</item>
+        <item>Эдит</item>
+        <item>Джерри</item>
+        <item>Кевин</item>
+        <item>Курито</item>
+        <item>Люси</item>
+        <item>Эль Мачо</item>
+        <item>Марго</item>
+        <item>Марк</item>
+        <item>Фил</item>
+        <item>Елизавета II</item>
+        <item>Стюарт</item>
+        <item>Том</item>
+        <item>Вектор</item>
+    </string-array>
 </resources>
