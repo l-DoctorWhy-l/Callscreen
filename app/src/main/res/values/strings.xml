@@ -2,6 +2,8 @@
     <string name="app_name">Call screen</string>
     <string name="hi">Привет</string>
     <string name="contacts">Контакты</string>
+    <string name="user_name">You</string>
+    <string name="interlocutor_name">Minion abcdefghijklmnopqrstuvwxyzabcdefghijklmnop</string>
 
     <string-array name="contacts">
         <item>Агнес</item>

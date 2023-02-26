@@ -24,16 +24,22 @@ public class MainActivity extends AppCompatActivity {
     private boolean cameraToggle = false;
     private boolean standard_widget_position = true;
     private boolean micToggle = false;
-    String user_name = "RODIPIT", interlocutor_name = "adfaafsafafaefadwdfsawfqafsdfAADFAFAFAFWFWAEFAW AFDAS";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         binding = ActivityMainBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
+
+        // user names
+        String user_name = getResources().getString(R.string.user_name), interlocutor_name = getResources().getString(R.string.interlocutor_name);
+
+        // cut user names
         binding.userName.setText(StringCutter.cutter(user_name, 28));
         binding.interlocutorName.setText(StringCutter.cutter(interlocutor_name, 28));
 
+
+        // make blur icons
         Blurry.with(this).radius(25).sampling(3).from(BitmapFactory.decodeResource(getResources(), R.drawable.minion)).into(binding.userLogo);
         Blurry.with(this).radius(25).sampling(3).from(BitmapFactory.decodeResource(getResources(), R.drawable.grew)).into(binding.interlocutorLogo);
 
